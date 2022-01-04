@@ -2,16 +2,24 @@
 ### **Design**
 ![Design Architecture](images/Pulumi-Black.png)
 ### **How To**
-1. Create infrastructure with pulumi 
-```
-pulumi up
-```
-2. Set region (change region base on your need)
+1. Set region (change region base on your need)
 ```
 pulumi config set aws:region ap-southeast-3
 ```
-3. Make sure instance already in Ok status
-4. Test your web application
+2. Install package needed
+```
+npm install
+```
+3. Generate keypair
+```
+ssh-keygen -f keypair
+```
+4. Create infrastructure with pulumi 
+```
+pulumi up
+```
+5. Make sure instance already in Ok status
+6. Test your web application
 ```
 curl $(pulumi stack output outputInstancePublicIp)
 ```
