@@ -1,6 +1,11 @@
 # **EXAMPLE PULUMI FOR AWS**
 ### **Infrastructure Design**
 ![Infrastructure Design](images/Pulumi-Black.png)
+### **Requirement**
+1. [AWS CLI installed](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+2. [Configure AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config)
+3. [Pulumi installed](https://www.pulumi.com/docs/get-started/install/)
+4. [Pulumi logged in](https://www.pulumi.com/docs/reference/cli/pulumi_login/)
 ### **How To**
 1. Set region (change region base on your need)
 ```
@@ -22,4 +27,9 @@ pulumi up
 6. Test your web application
 ```
 curl $(pulumi stack output outputInstancePublicIp)
+```
+### **Cleaning Up**
+1. Destroy infrastructure
+```
+pulumi destroy
 ```
