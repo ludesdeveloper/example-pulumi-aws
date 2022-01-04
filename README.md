@@ -1,4 +1,4 @@
-# **EXAMPLE PULUMI FOR AWS**
+# **EXAMPLE PULUMI(TYPESCRIPT) FOR AWS**
 ### **Infrastructure Design**
 ![Infrastructure Design](images/Pulumi.png)
 > Docker will be installed in EC2, and will pull nginx image (userdata AWS)
