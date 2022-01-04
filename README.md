@@ -2,9 +2,12 @@
 ### **Design**
 ![Design Architecture](images/Pulumi-Black.png)
 ### **How To**
-1. Number One 
+1. Create infrastructure with pulumi 
 ```
-Code
+pulumi up
 ```
-> Note
+2. Set region (change region base on your need)
+```
+pulumi config set aws:region ap-southeast-3
+```
 
