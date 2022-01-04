@@ -1,6 +1,6 @@
 # **EXAMPLE PULUMI FOR AWS**
-### **Design**
-![Design Architecture](images/Pulumi-Black.png)
+### **Infrastructure Design**
+![Infrastructure Design](images/Pulumi-Black.png)
 ### **How To**
 1. Set region (change region base on your need)
 ```
