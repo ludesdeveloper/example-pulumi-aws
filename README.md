@@ -23,5 +23,3 @@ pulumi up
 ```
 curl $(pulumi stack output outputInstancePublicIp)
 ```
-5. 
-
