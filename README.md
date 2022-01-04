@@ -10,4 +10,10 @@ pulumi up
 ```
 pulumi config set aws:region ap-southeast-3
 ```
+3. Make sure instance already in Ok status
+4. Test your web application
+```
+curl $(pulumi stack output outputInstancePublicIp)
+```
+5. 
 
