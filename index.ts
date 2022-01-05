@@ -1,3 +1,4 @@
+import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as fs from "fs";
 
@@ -84,12 +85,12 @@ const securityGroup = new aws.ec2.SecurityGroup("security-SecurityGroup", {
 });
 const instance = new aws.ec2.Instance("instance", {
     ami: ubuntu.then(ubuntu => ubuntu.id),
-    instanceType: "t3.micro",
+    instanceType: "t3.medium",
     keyName: deployer.keyName,
     securityGroups: [securityGroup.id],
     subnetId: subnet.id,
     privateIp: "172.16.10.30",
     associatePublicIpAddress: true,
     userData: fs.readFileSync('./install-docker.sh', 'utf8'),
-});
+}, { deleteBeforeReplace: true });
 export const outputInstancePublicIp = instance.publicIp
